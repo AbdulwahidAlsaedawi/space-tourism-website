@@ -90,7 +90,8 @@ body {
     background-color: hsl( var(--clr-dark) );
     line-height: 1.5;
     min-height: 100vh;
-    
+    background-size: cover;
+    background-position: bottom center;
     display: grid;
     grid-template-rows: min-content 1fr;
     
@@ -160,7 +161,7 @@ select {
 
 .sr-only {
   position: absolute; 
-  width: 1px;
+  width: 0.0625rem;
   height: 1px;
   padding: 0;
   margin: -1px; 
@@ -435,10 +436,7 @@ select {
 /* ----------------------------- */
 /* Page specific background      */
 /* ----------------------------- */
-body {
-    background-size: cover;
-    background-position: bottom center;
-}
+
 /* home */
 .home {
     background-image: url(./assets/home/background-home-mobile.jpg);
