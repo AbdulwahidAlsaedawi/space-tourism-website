@@ -731,7 +731,7 @@ body {
 /* Technology tab buttons 1,2,3 styling */
 .technology-tab-list {
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   gap: 2rem;
 }
 
