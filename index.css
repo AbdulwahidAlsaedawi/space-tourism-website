@@ -98,8 +98,7 @@ body {
 }
 
 /* make images easier to work with */
-img,
-picutre {
+img {
     max-width: 100%;
     display: block;
 }
@@ -310,7 +309,7 @@ select {
 @media (max-width: 35rem) {
     .primary-navigation {
         --underline-gap: .5rem;
-        position: fixed;
+        position: sticky;
         z-index: 1000;
         inset: 0 0 0 30%;
         list-style: none;
