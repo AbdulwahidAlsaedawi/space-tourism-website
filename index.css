@@ -146,7 +146,7 @@ select {
 }
 
 .flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 1rem);
+    margin-block-start: var(--flow-space, 1rem);
 }
 
 .flow--space-small {
@@ -162,7 +162,7 @@ select {
 .sr-only {
   position: absolute; 
   width: 0.0625rem;
-  height: 1px;
+  height: 0.0625rem;
   padding: 0;
   margin: -1px; 
   overflow: hidden;
@@ -222,19 +222,6 @@ select {
 .fs-700,
 .fs-600 {
     line-height: 1.1;
-}
-
-.numbered-title {
-    font-family: var(--ff-sans-cond);
-    font-size: var(--fs-500);
-    text-transform: uppercase;
-    letter-spacing: 4.72px; 
-}
-
-.numbered-title span {
-    margin-right: .5em;
-    font-weight: 700;
-    color: hsl( var(--clr-white) / .25);
 }
 
 
@@ -417,20 +404,21 @@ select {
 
 .dot-indicators > * {
     cursor: pointer;
-    border: 0;
+    border: none;
     border-radius: 50%;
-    padding: .5em;
-    background-color: hsl( var(--clr-white) / .25);
-}
- 
-.dot-indicators > *:hover,
-.dot-indicators > *:focus { 
-    background-color: hsl( var(--clr-white) / .5);
+    padding: 0.5rem;
+    background-color: hsl(var(--clr-white) / 0.25);
 }
 
-.dot-indicators > [aria-selected="true"] {
-    background-color: hsl( var(--clr-white) / 1); 
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl(var(--clr-white) / 0.5);
 }
+
+.dot-indicators > *[aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+}
+
 
 
 /* ----------------------------- */
@@ -523,6 +511,19 @@ select {
 
 .grid-container p:not([class]) {
     max-width: 50ch;
+}
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl( var(--clr-white) / .25);
 }
 
 .numbered-title {
