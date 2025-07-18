@@ -3,6 +3,11 @@
 /* ------------------- */
 
 :root {
+    --line-height-base: 1.5;
+    --viewport-height: 100dvh;
+    /* Responsive */
+    --flow-space: clamp(0.5rem, 2vw, 2rem);
+    
     /* colors */
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
@@ -88,13 +93,12 @@ body {
     font-size: var(--fs-400);
     color: hsl( var(--clr-white) );
     background-color: hsl( var(--clr-dark) );
-    line-height: 1.5;
-    min-height: 100vh;
+    line-height: var(--line-height-base);
+    min-height: var(--viewport-height);
     background-size: cover;
     background-position: bottom center;
     display: grid;
     grid-template-rows: min-content 1fr;
-    
     overflow-x: hidden;
 }
 
@@ -146,7 +150,7 @@ select {
 }
 
 .flow > *:where(:not(:first-child)) {
-    margin-block-start: var(--flow-space, 1rem);
+    margin-block-start: var(--flow-space);
 }
 
 .flow--space-small {
@@ -164,7 +168,7 @@ select {
   width: 0.0625rem;
   height: 0.0625rem;
   padding: 0;
-  margin: -1px; 
+  margin: -0.0625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
@@ -287,7 +291,7 @@ select {
 
 .primary-navigation a > span {
     font-weight: 700;
-    margin-right: .5em;
+    margin-inline-end: 0.5em;
 }
 
 .mobile-nav-toggle {
@@ -518,16 +522,13 @@ select {
     font-size: var(--fs-500);
     text-transform: uppercase;
     letter-spacing: 4.72px; 
+     grid-area: title;
 }
 
 .numbered-title span {
     margin-right: .5em;
     font-weight: 700;
     color: hsl( var(--clr-white) / .25);
-}
-
-.numbered-title {
-    grid-area: title;
 }
 
 /* destination layout */
